@@ -88,7 +88,7 @@ class SignIn extends Component {
                 });
               }}
               autoCorrect={false}
-              placeholder="ID"
+              placeholder="Email"
               placeholderTextColor={
                 this.state.success.id
                   ? BaseColor.grayColor
@@ -134,10 +134,21 @@ class SignIn extends Component {
             <TouchableOpacity
               onPress={() => navigation.navigate("ResetPassword")}
             >
-              <Text body1 grayColor style={{ marginTop: 25 }}>
+              <Text body1 primaryColor style={{ marginTop: 25 }}>
                 Forgot your password?
               </Text>
             </TouchableOpacity>
+            <View style={{ flexDirection: "row" }}>
+              <Text body1 grayColor style={{ marginTop: 25 }}>
+                Don't have an account ?
+              </Text>
+              <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+                <Text body1 primaryColor style={{ marginTop: 25 }}>
+                  {"  "}
+                  Sign Up
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -155,7 +166,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

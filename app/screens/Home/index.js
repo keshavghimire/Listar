@@ -34,11 +34,11 @@ export default class Home extends Component {
     this.state = {
       banner: HomeBannerData,
       location: [
-        { id: "1", name: "Delux Room" },
-        { id: "2", name: "Tripple Room" },
-        { id: "3", name: "Single Room" },
-        { id: "4", name: "King Room" },
-        { id: "5", name: "King Room" }
+        { id: "1", name: "Real Estate" },
+        { id: "2", name: "R15 V3" },
+        { id: "3", name: "ABC Company" },
+        { id: "4", name: "Helper Job" },
+        { id: "5", name: "NS" }
       ],
       services: HomeServicesData,
       popular: HomePopularData,
@@ -146,7 +146,7 @@ export default class Home extends Component {
                   ]}
                 >
                   <Text body1 grayColor style={{ flex: 1 }}>
-                    Search Location
+                    Search Product
                   </Text>
                   <View style={styles.lineForm} />
                   <Icon
@@ -165,7 +165,7 @@ export default class Home extends Component {
             <FlatList
               contentContainerStyle={{ padding: 20 }}
               data={services}
-              numColumns={4}
+              numColumns={3}
               keyExtractor={(item, index) => item.id}
               renderItem={({ item }) => {
                 return (
@@ -202,10 +202,10 @@ export default class Home extends Component {
             {/* Hiking */}
             <View style={styles.contentPopular}>
               <Text title3 semibold>
-                Popular Locations
+                Popular Product
               </Text>
               <Text body2 grayColor>
-                Let find out what most interesting things
+                Let find out what most interesting Product
               </Text>
             </View>
             <FlatList
@@ -235,10 +235,10 @@ export default class Home extends Component {
               }}
             >
               <Text title3 semibold>
-                Recent Location
+                Recent Product
               </Text>
               <Text body2 grayColor>
-                What’s the Worst That Could Happen
+                What’s the Recent Product in Market???
               </Text>
               <FlatList
                 style={{ marginTop: 20 }}
